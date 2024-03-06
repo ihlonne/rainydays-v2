@@ -5,11 +5,14 @@
 @import url('./header.css');
 @import url('./footer.css');
 
-.hero-wrapper {
+.flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero-wrapper {
     background: url('../../assets/images/photo-1492133969098-09ba49699f47.avif')
         center / cover no-repeat;
     height: 80vh;
@@ -56,5 +59,123 @@
                 font-size: 0.75rem;
             }
         }
+    }
+}
+
+/* ------------------------- 
+
+LANDING PAGE 
+Womens and mens jackets
+
+------------------------- */
+
+.products-container {
+    min-height: 100vh;
+}
+
+.women-container,
+.men-container {
+    min-height: 33vh;
+    width: 100%;
+
+    @media only screen and (max-width: 768px) {
+        overflow: hidden;
+    }
+}
+
+.women-container h2,
+.men-container h2 {
+    font-size: 24px;
+    margin: 3em 0;
+}
+
+.women-container__products,
+.men-container__products {
+    display: flex;
+    gap: 1em;
+}
+
+.women-container__products img,
+.men-container__products img {
+    max-width: 266px;
+}
+
+.women-container__products-product__info,
+.men-container__products-product__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.women-container__products-product__info > div,
+.men-container__products-product__info > div {
+    font-weight: 700;
+}
+
+/* ------------------------- 
+
+LANDING PAGE 
+Info
+
+------------------------- */
+
+.info-wrapper {
+    & h2 {
+        margin: 4rem;
+        font-size: 2.5rem;
+        color: #0c0c0c;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    & span {
+        font-weight: 700;
+        color: #8ab0bd;
+    }
+
+    .images-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        overflow: clip;
+        gap: 1rem;
+        margin: 1rem;
+
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.practical-info-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #0c0c0c;
+    text-align: center;
+
+    margin: 6rem 0;
+
+    & p:first-of-type {
+        font-weight: 700;
+    }
+
+    & p {
+        margin-top: 2em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin: 0 0 4em 0;
+    }
+}
+
+.practical-info-wrapper__items {
+    max-width: 185px;
+    margin: 0 2em;
+
+    font-size: 0.875rem;
+    text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 1rem;
     }
 }
