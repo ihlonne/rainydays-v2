@@ -8,6 +8,7 @@
     width: 100%;
     padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: 1s ease;
 
     & img {
         max-height: 45px;
@@ -30,6 +31,11 @@
         font-weight: 600;
         margin: 0.5rem;
     }
+}
+
+.change {
+    background-color: white;
+    transition: 1s ease;
 }
 
 .navigation-links {
