@@ -26,6 +26,9 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+
+        <script src="./src/js/api.js" type="module"></script>
+        <script src="./src/js/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -77,131 +80,18 @@
                     <a href="">Shop men</a>
                 </div>
             </section>
-            <section class="products">
-                <div id="women-container" class="women-container container">
-                    <h2>WOMEN</h2>
-                    <div class="women-container__products">
-                        <div class="women-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/women1.jpg"
-                                    alt="woman showcasing a navy blue training jacket"
-                                />
-                                <div
-                                    class="women-container__products-product__info"
-                                >
-                                    <div>Helen Runner</div>
-                                    <div>999 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="women-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/women2.jpg"
-                                    alt="woman showcasing a beige fleece jacket"
-                                />
-                                <div
-                                    class="women-container__products-product__info"
-                                >
-                                    <div>Bea Teddy Fleece</div>
-                                    <div>549 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="women-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/women3.jpg"
-                                    alt="woman showcasing a dark blue parka jacket"
-                                />
-                                <div
-                                    class="women-container__products-product__info"
-                                >
-                                    <div>Maeve Parka</div>
-                                    <div>1099 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="women-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/women4.jpg"
-                                    alt="woman showcasing a black and blue training jacket"
-                                />
-                                <div
-                                    class="women-container__products-product__info"
-                                >
-                                    <div>Joan Training</div>
-                                    <div>899 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="men-container" class="men-container container">
-                    <h2>MEN</h2>
-                    <div class="men-container__products">
-                        <div class="men-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/men1.jpg"
-                                    alt="man showcasing a grey zipper jacket"
-                                />
-                                <div
-                                    class="men-container__products-product__info"
-                                >
-                                    <div>Theo Zipper Jacket</div>
-                                    <div>559 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="men-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/men2.jpg"
-                                    alt="man showcasing a black parka jacket"
-                                />
-                                <div
-                                    class="men-container__products-product__info"
-                                >
-                                    <div>Liam Parka</div>
-                                    <div>1299 KR</div>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="men-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/men3.jpg"
-                                    alt="man showcasing a blue rain jacket"
-                                />
-                                <div
-                                    class="men-container__products-product__info"
-                                >
-                                    <div>Phil Jacket</div>
-                                    <div>999 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="men-container__products-product">
-                            <a href="./pages/product-page/product.html">
-                                <img
-                                    src="./assets/images/men4.jpg"
-                                    alt="man showcasing a black rain jacket"
-                                />
-                                <div
-                                    class="men-container__products-product__info"
-                                >
-                                    <div>Damien Jacket</div>
-                                    <div>999 KR</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <section class="products-wrapper flex">
+                <div id="women-wrapper" class="women-wrapper flex">
+                    <h2>WOMEN</h2>
+                    <div class="women-wrapper__products carousel"></div>
+                </div>
+                <div id="men-wrapper" class="men-wrapper flex">
+                    <h2>MEN</h2>
+                    <div class="men-wrapper__products carousel"></div>
                 </div>
             </section>
+
             <section class="info-wrapper">
                 <h2>
                     Discover <span>adventure-ready</span> jackets, where
@@ -343,6 +233,5 @@
                 </div>
             </div>
         </footer>
-        <script src="./src/js/script.js"></script>
     </body>
 </html>
