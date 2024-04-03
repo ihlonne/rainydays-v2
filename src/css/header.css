@@ -35,6 +35,22 @@
     }
 }
 
+.amount {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8ab0bd;
+    height: 15px;
+    width: 15px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    top: 18px;
+    right: 32px;
+    border-radius: 10px;
+}
 .change {
     background-color: white;
     transition: 1s ease;
