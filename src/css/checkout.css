@@ -1,0 +1,281 @@
+/* ------------------------- 
+
+CHECKOUT PAGE
+Shipping information 
+
+------------------------- */
+
+#checkout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+}
+
+#information-wrapper {
+    margin: 2rem 0;
+    margin: 7rem 5rem;
+}
+
+.shipping-info-container {
+    max-width: 100%;
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        width: 90%;
+    }
+}
+
+.shipping-info-container input {
+    height: 45px;
+    width: 100%;
+
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+.shipping-info-container form > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.shipping-info-container form > div > div {
+    width: 250px;
+}
+
+.shipping-info-container span {
+    color: rgb(202, 25, 25);
+}
+
+/* ------------------------- 
+
+CHECKOUT PAGE
+Payment method
+
+------------------------- */
+
+.payment-method-container {
+    max-width: 100%;
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        width: 90%;
+    }
+}
+
+.payment-method-select input {
+    margin-right: 2rem;
+}
+
+.payment-method-select img {
+    width: 25px;
+    max-height: 15px;
+}
+
+.credit-card-info {
+    margin-top: 2rem;
+}
+
+.credit-card-info > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.credit-card-info > div > div {
+    width: 250px;
+
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        width: 150px;
+    }
+}
+
+.credit-card-info input {
+    height: 45px;
+    width: 100%;
+
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+.credit-card-info span {
+    color: rgb(202, 25, 25);
+}
+
+/* ------------------------- 
+
+CHECKOUT PAGE
+Order summary
+
+------------------------- */
+
+#order-summary-wrapper {
+    background: #f9f9f9;
+
+    padding: 3rem 5rem;
+    margin-top: 70px;
+}
+
+.order-review-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.order-review__order-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(142, 142, 160);
+
+    width: 150px;
+    height: 150px;
+
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+.order-review__order-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+.order-review__order-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+        max-width: 400px;
+    }
+}
+.order-review__order-info__top {
+    & h2 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & p {
+        margin-bottom: 0.5rem;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+}
+
+.order-review__order-info__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div:last-of-type {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        & p {
+            font-weight: 700;
+        }
+
+        @media only screen and (min-width: 360px) and (max-width: 768px) {
+            flex-direction: row-reverse;
+            align-items: center;
+
+            gap: 0.5rem;
+        }
+    }
+}
+
+.select-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    & p {
+        font-weight: 700;
+    }
+
+    & p:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.25rem;
+        margin: 0 0.5rem;
+
+        width: 30px;
+        height: 30px;
+
+        border: 2px solid #000;
+        border-radius: 50px;
+
+        @media only screen and (min-width: 360px) and (max-width: 768px) {
+            font-size: 0.75rem;
+            width: 20px;
+        }
+    }
+}
+
+.order-review__total-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    background: #f0f0f0;
+    margin-top: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+
+    & p {
+        margin-bottom: 0.5rem;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+}
+
+.total-info-price {
+    text-align: right;
+}
+
+.order-review__buttons {
+    margin-top: 2rem;
+
+    & a {
+        background: #0c0c0c;
+        color: #fff;
+        padding: 0.75rem 2rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.75rem;
+        border-radius: 10px;
+        margin-right: 0.5rem;
+        border: 2px solid #0c0c0c;
+    }
+    .checkout-btn {
+        background: #fff;
+        color: #0c0c0c;
+    }
+}
