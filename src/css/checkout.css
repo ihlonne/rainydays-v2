@@ -125,10 +125,16 @@ Order summary
 }
 
 .order-review-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+    }
 }
 
 .order-review__order-image {
