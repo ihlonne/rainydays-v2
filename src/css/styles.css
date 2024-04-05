@@ -6,6 +6,7 @@
 @import url('./footer.css');
 @import url('./checkout.css');
 @import url('./checkout-success.css');
+@import url('./product.css');
 
 .flex {
     display: flex;
