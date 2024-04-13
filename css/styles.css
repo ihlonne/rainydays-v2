@@ -142,6 +142,7 @@ Womens and mens jackets
 .product__img {
   height: 300 px;
   max-width: 266px;
+  cursor: pointer;
 
   & img {
     max-height: 250px;
@@ -155,6 +156,7 @@ Womens and mens jackets
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .products-product__info {
