@@ -12,14 +12,17 @@ async function displayDataOnLandingPage(rainyDaysData) {
     productArticle.classList.add('.card');
     const content = `
             <div class="product__img" >
-            <a href="/product/?=${item.id}"><img src="${item.image.url}" alt="${item.description}" draggable="false">
-            </a>
+            <img src="${item.image.url}" alt="${item.description}" draggable="false">
+            
             </div>
             <div class="products-product__info">
-            <a href=""><h3>${item.title}</h3> </a>
+            <h3>${item.title}</h3>
                 <p>$${item.price}</p>
             </div>
       `;
+    productArticle.addEventListener('click', () => {
+      window.location.href = `/product/?id=${item.id}`;
+    });
     productArticle.innerHTML = content;
 
     productWrapper.append(productArticle);
