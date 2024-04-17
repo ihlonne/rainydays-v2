@@ -8,6 +8,7 @@
 @import url('./checkout-success.css');
 @import url('./product.css');
 @import url('./login.css');
+@import url('./loader.css');
 
 .flex {
   display: flex;
