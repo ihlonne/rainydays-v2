@@ -1,63 +1,121 @@
-import { main } from '../home.mjs';
+import { API_RAINY_DAYS } from './common/constants.mjs';
+import { hideLoader, showLoader } from './loader.mjs';
 
-const imgWrapper = document.querySelector(
-  '.product-page__items-container__images'
-);
-const descriptionWrapper = document.querySelector(
-  '.product-page__items-container__info'
-);
+// SAVE UNIQUE ID FROM SELECTED PRODUCT
+const getJacketIdFromQuery = async function () {
+  const urlParam = new URLSearchParams(window.location.search);
+  return urlParam.get('id');
+};
 
-function createImage(rainyDaysData) {
-  const imgMarkup = `
-  <div class="product-page__items-container__images-main">
-    <img src="${item.image.url}" />
-  </div>
-  `;
-}
+// SAVE UNIQUE DATA FROM SELECTED PRODUCT
+const getSingleJacket = async function () {
+  const id = await getJacketIdFromQuery();
+  const productUrl = `${API_RAINY_DAYS}/${id}`;
 
-function createDescription(rainyDaysData) {
-  const descriptionMarkup = `
-  <h1${item.title}</h1>
-  <class="product-page__items-container__info-text">
-  <p class="price">$${item.price}</p>
-  <p class="description">${item.description}
-  </p>
-  </class=>
-  <div class="product-page__items-container__select">
-    <class="product-page__items-container__info-size-select">
-      
-    </div>
-    <div class="product-page__items-container__cta">
-    <button class="add-to-cart-btn">Add to cart </button>
-    <button class="add-to-favorites-btn">
-      <i class="fa-solid fa-heart"></i>
-    </button>
-    </div>
-    <div class="product-page__additional-info">
-    <p>
-      <i class="fa-solid fa-circle-check"></i> Free shipping on
-      deliveries over 800 NOK
-    </p>
-    <p><i class="fa-solid fa-circle-check"></i> days delivery</p>
-    </div>
-  </div>
-`;
-}
+  try {
+    const response = await fetch(productUrl);
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    }
+  } catch (error) {
+    throw new Error(error);
+  }
+};
 
-function createSize(rainyDaysData) {
-  const sizeOptionsWrapper = document.querySelector(
-    'product-page__items-container__info-size-select'
+// CREATE PAGE TITLE
+const createTitle = async function () {
+  const data = await getSingleJacket();
+
+  document.title = `Buy ${data.data.title} | Rainy Days`;
+};
+
+createTitle();
+
+// CREATE IMAGE
+export async function createImage() {
+  const data = await getSingleJacket();
+
+  const imgWrapper = document.querySelector(
+    '.product-page__items-container__images'
   );
-  rainyDaysData.data.map((item) => {
-    const sizeItem = document.createElement('li');
-    sizeItem.classList.add('info-size-select__btn');
-    const content = `
-    <a>${item.size}</a>
-    `;
-
-    sizeItem.addEventListener('click', () => {
-      sizeItem.classList.add('info-size-select__btn-selected');
-    });
-    sizeOptionsWrapper.innerHTML = content;
-  });
+  const imageDiv = document.createElement('div');
+  imageDiv.classList.add('.product-page__items-container__images-main');
+  const imgMarkup = `
+    <img src="${data.data.image.url}" alt="${data.data.image.alt}"/>
+  `;
+  imageDiv.innerHTML = imgMarkup;
+  imgWrapper.append(imageDiv);
 }
+
+// CREATE PRODUCT DESCRIPTION
+async function createDescription() {
+  const data = await getSingleJacket();
+
+  const descriptionWrapper = document.querySelector(
+    '.product-page__items-container__description'
+  );
+
+  const descriptionDiv = document.createElement('div');
+  descriptionDiv.classList.add('product-page__items-container__info-text');
+  const descriptionMarkup = `
+        <h1>${data.data.title}</h1>
+        <div class="product-page__items-container__info-text">
+        <p class="price">$${data.data.price}</p>
+        <p class="description">${data.data.description}
+        </p>
+        </div>
+        <div class="product-page__items-container__select">
+          <class="product-page__items-container__info-size-select">
+            
+          </div>
+          
+        </div>
+      
+    `;
+  descriptionDiv.innerHTML = descriptionMarkup;
+  descriptionWrapper.append(descriptionDiv);
+}
+
+// CREATE SIZE BUTTONS
+async function createSize() {
+  const data = await getSingleJacket();
+
+  const sizeOptionsWrapper = document.querySelector(
+    '.product-page__items-container__info-size-select'
+  );
+
+  try {
+    data.data.sizes.map((item) => {
+      const sizeItem = document.createElement('button');
+      sizeItem.classList.add('info-size-select__btn');
+      if (item === 'S') {
+        sizeItem.classList.add('info-size-select__btn-selected');
+      }
+      const sizeOptionMarkup = `
+      ${item}
+      `;
+      sizeItem.innerHTML = sizeOptionMarkup;
+      sizeOptionsWrapper.append(sizeItem);
+    });
+  } catch (error) {
+    console.log(error);
+    throw new Error();
+  }
+}
+
+// RENDER CONTENT TO PAGE WHEN DOM CONTENT IS LOADED
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    showLoader();
+
+    createImage();
+    createDescription();
+    createSize();
+  } catch (error) {
+    console.log(error);
+    throw new Error();
+  } finally {
+    hideLoader();
+  }
+});
