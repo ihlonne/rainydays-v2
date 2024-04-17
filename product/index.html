@@ -29,14 +29,17 @@
 
     <script src="../src/js/script.js" defer></script>
     <script src="../src/js/addToCart.js" defer></script>
+    <script type="module" src="../scripts/product.mjs"></script>
+    <script src="../scripts/common/common.js" defer></script>
   </head>
   <body>
     <header>
       <nav class="navigation">
-        <img
-          src="../../../assets/images/logo.png"
-          alt="company logo showing mountains and text saying rainy days"
-        />
+        <a href="/"
+          ><img
+            src="../assets/images/logo.png"
+            alt="company logo showing mountains and text saying rainy days"
+        /></a>
         <div class="navigation-links">
           <ul>
             <a href="">
@@ -60,7 +63,7 @@
           <a href="">
             <i class="fa-regular fa-heart fa-lg"></i>
           </a>
-          <a href="">
+          <a href="../checkcout/">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
           </a>
           <!-- <div class="amount">2</div> -->
@@ -75,36 +78,19 @@
 
     <main id="product-page" class="product-page-container flex">
       <section class="product-page__items-container">
-        <div class="product-page__items-container__images">
-          <div class="product-page__items-container__images-main">
-            <img src="./images/darkBlueClose.jpg" alt="product image" />
-          </div>
+        <div class="loader hidden">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="product-page__items-container__images"></div>
         <div class="product-page__items-container__info">
-          <h1>Helen Softshell Runner's Jacket</h1>
-          <div class="product-page__items-container__info-text">
-            <p class="price">Kr. 999</p>
-            <p class="description">
-              Experience the ultimate in lightweight design, exceptional
-              durability, and weather protection with our shell jacket. Crafted
-              as a versatile four-season companion, this 3-layer jacket excels
-              in demanding conditions, making it perfect for a variety of
-              activities.
-            </p>
-          </div>
+          <div class="product-page__items-container__description"></div>
+
           <div class="product-page__items-container__select">
-            <div class="product-page__items-container__info-size-select">
-              <button class="info-size-select__btn">XS</button>
-              <button
-                class="info-size-select__btn info-size-select__btn-selected"
-              >
-                S
-              </button>
-              <button class="info-size-select__btn">M</button>
-              <button class="info-size-select__btn">L</button>
-              <button class="info-size-select__btn">XL</button>
-              <button class="info-size-select__btn">XXL</button>
-            </div>
+            <div class="product-page__items-container__info-size-select"></div>
+
             <div class="product-page__items-container__cta">
               <button class="add-to-cart-btn">Add to cart</button>
               <button class="add-to-favorites-btn">
