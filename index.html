@@ -25,6 +25,7 @@
 
     <script type="module" src="/scripts/scripts.mjs"></script>
     <script src="./scripts/common/common.js" defer></script>
+    <script src="/scripts/components/productSelect.js" defer"></script>
   </head>
   <body>
     <header>
@@ -68,6 +69,7 @@
         </div>
       </nav>
     </header>
+
     <main>
       <section class="hero-wrapper flex">
         <h1>Push the comfort zone</h1>
@@ -82,12 +84,12 @@
         <div id="product-wrapper" class="product-wrapper flex">
           <div class="product-wrapper__info">
             <h2>New in</h2>
-            <div class="select">
-              <select>
-                <option value="0">News</option>
-                <option value="1">Bestsellers</option>
-                <option value="2">Womens</option>
-                <option value="3">Mens</option>
+            <div class="select" >
+              <select id="select" name="select" >
+                <option value="">Recommended</option>
+                <option value="Favorite">Bestsellers</option>
+                <option value="Female">Womens</option>
+                <option value="Male">Mens</option>
               </select>
             </div>
           </div>
@@ -129,17 +131,17 @@
           </div>
         </div>
         <div class="practical-info-wrapper flex">
-          <div class="info-container__items">
+          <div class="practical-info__items">
             <i class="fa-solid fa-truck-fast fa-3x"></i>
             <p>Free delivery over 800 NOK</p>
             <p>Get free delivery on purchases ordered over 800 NOK</p>
           </div>
-          <div class="info-container__items">
+          <div class="practical-info__items">
             <i class="fa-solid fa-arrows-rotate fa-3x"></i>
             <p>30 days free exchange</p>
             <p>Exchange your items for free within 30 days of receiving them</p>
           </div>
-          <div class="info-container__items">
+          <div class="practical-info__items">
             <i class="fa-solid fa-2 fa-3x"></i>
             <p>2 years warranty on all items</p>
             <p>All items are issued a 2 year warranty</p>
