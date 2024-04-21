@@ -13,6 +13,7 @@ const getSingleJacket = async function () {
   const productUrl = `${API_RAINY_DAYS}/${id}`;
 
   try {
+    showLoader();
     const response = await fetch(productUrl);
     if (response.ok) {
       const data = await response.json();
@@ -20,6 +21,8 @@ const getSingleJacket = async function () {
     }
   } catch (error) {
     throw new Error(error);
+  } finally {
+    hideLoader();
   }
 };
 
