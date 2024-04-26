@@ -1,4 +1,4 @@
-export async function displayJackets(filteredData) {
+export function displayJackets(filteredData) {
   const productWrapper = document.querySelector('.product-wrapper__products');
   productWrapper.innerHTML = '';
 
@@ -10,6 +10,7 @@ export async function displayJackets(filteredData) {
     productArticle.classList.add('.products-wrapper__item');
     productArticle.classList.add('.card');
     const content = `
+            <a href="/product/?id=${item.id}">
             <div class="product__img" >
               <img src="${item.image.url}" alt="${item.description}">
             </div>
@@ -17,10 +18,11 @@ export async function displayJackets(filteredData) {
               <h3>${item.title}</h3>
               <p>$${item.price}</p>
             </div>
+            </a>
       `;
-    productArticle.addEventListener('click', () => {
+    /* productArticle.addEventListener('click', () => {
       window.location.href = `/product/?id=${item.id}`;
-    });
+    }); */
     productArticle.innerHTML = content;
 
     productWrapper.append(productArticle);
