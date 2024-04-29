@@ -1,5 +1,5 @@
 export function displayJackets(filteredData) {
-  const productWrapper = document.querySelector('.product-wrapper__products');
+  const productWrapper = document.querySelector('.products-wrapper__products');
   productWrapper.innerHTML = '';
 
   console.log(filteredData);
@@ -8,13 +8,13 @@ export function displayJackets(filteredData) {
     const productArticle = document.createElement('article');
     productArticle.setAttribute('id', item.id);
     productArticle.classList.add('.products-wrapper__item');
-    productArticle.classList.add('.card');
+    productArticle.classList.add('.flex');
     const content = `
             <a href="/product/?id=${item.id}">
-            <div class="product__img" >
+            <div class="products-wrapper__img" >
               <img src="${item.image.url}" alt="${item.description}">
             </div>
-            <div class="products-product__info">
+            <div class="products-product__info-text">
               <h3>${item.title}</h3>
               <p>$${item.price}</p>
             </div>
