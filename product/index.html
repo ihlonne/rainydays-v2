@@ -27,7 +27,10 @@
       referrerpolicy="no-referrer"
     />
 
-    <script type="module" src="../scripts/product.mjs"></script>
+    <script
+      type="module"
+      src="../scripts/ui/jackets/handleSingleJacket.mjs"
+    ></script>
   </head>
   <body>
     <header>
@@ -73,40 +76,13 @@
       </nav>
     </header>
 
-    <main id="product-page" class="product-page-container flex">
-      <section class="product-page__items-container">
-        <div class="product-page__items-container__images">
-          <div class="loader hidden">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="product-page__items-container__info">
-          <div class="product-page__items-container__description"></div>
-
-          <div class="product-page__items-container__select">
-            <div class="product-page__items-container__info-size-select"></div>
-
-            <div class="product-page__items-container__cta">
-              <button class="add-to-cart-btn" onclick="addToCart()">
-                Add to cart
-              </button>
-              <button class="add-to-favorites-btn">
-                <i class="fa-solid fa-heart"></i>
-              </button>
-            </div>
-            <div class="product-page__additional-info">
-              <p>
-                <i class="fa-solid fa-circle-check"></i> Free shipping on
-                deliveries over 800 NOK
-              </p>
-              <p><i class="fa-solid fa-circle-check"></i> 2-7 days delivery</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main id="product-page" class="products-wrapper flex">
+      <div class="loader hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </main>
 
     <footer class="footer-container">
