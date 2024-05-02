@@ -1,3 +1,6 @@
+import { addToCart } from '../../cart/cart.mjs';
+import { displayCartItem } from '../../cart/displayCartItem.mjs';
+
 export const displaySingleJacket = function (jacket) {
   // generate page title
   document.title = `Buy ${jacket.data.title} | Rainy Days`;
@@ -5,6 +8,8 @@ export const displaySingleJacket = function (jacket) {
   // generate section wrapper
   const jacketWrapper = document.createElement('section');
   jacketWrapper.classList.add('product-wrapper');
+  jacketWrapper.classList.add('flex');
+  jacketWrapper.textContent = '';
 
   // generate image wrapper
   const jacketImageWrapper = document.createElement('div');
@@ -56,6 +61,18 @@ export const displaySingleJacket = function (jacket) {
     jacketSizes.append(sizeItem);
   });
 
+  // set default size to S
+  let selectedSize = 'S';
+
+  // set size on click
+  jacketSizes.querySelectorAll('button').forEach((button) => {
+    button.addEventListener('click', () => {
+      selectedSize = button.textContent;
+      console.log(selectedSize);
+      displayCartItem(selectedSize);
+    });
+  });
+
   // generate cta buttons wrapper
   const buttonsWrapper = document.createElement('div');
   buttonsWrapper.classList.add('product-page__cta');
@@ -66,28 +83,16 @@ export const displaySingleJacket = function (jacket) {
   addToCartButton.textContent = 'Add to cart';
   addToCartButton.addEventListener('click', () => {
     // add to cart
-    console.log('add to cart');
+    addToCart(jacket);
   });
 
-  // generate add to favorites button
-  const addToFavoritesButton = document.createElement('button');
-  addToFavoritesButton.classList.add('add-to-favorites-btn');
-  const heartBtn = document.createElement('i');
-  const classesToAdd = ['fa-solid', 'fa-heart'];
-  heartBtn.classList.add(...classesToAdd);
-  addToCartButton.append(heartBtn);
-
-  buttonsWrapper.append(addToCartButton, addToFavoritesButton);
+  buttonsWrapper.append(addToCartButton);
 
   // append to buttons wrapper
   jacketButtonsContainer.append(jacketSizes, buttonsWrapper);
 
   // append to info wrapper
-  jacketInfoWrapper.append(
-    jacketInfoInnerWrapper,
-    jacketSizes,
-    jacketButtonsContainer
-  );
+  jacketInfoWrapper.append(jacketInfoInnerWrapper, jacketButtonsContainer);
 
   // append to section wrapper
   jacketWrapper.append(jacketImageWrapper, jacketInfoWrapper);
