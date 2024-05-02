@@ -3,16 +3,18 @@
 PRODUCT INFO PAGE
 
 ------------------------- */
-
+#product-page {
+  margin: 0 auto;
+}
 .product-page {
   min-height: 100vh;
 }
 
 .product-wrapper {
-  display: inline-grid;
-  grid-template-columns: 30% 50%;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  gap: 2rem;
 
   margin: 10rem 4rem 8rem;
 
