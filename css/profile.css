@@ -1,0 +1,49 @@
+#profile {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  & h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
+.account-owner {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+  text-align: left;
+}
+
+.initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-contrast);
+  color: var(--text-light);
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.info {
+  & span {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  & p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  & a {
+    font-weight: 700;
+  }
+}
