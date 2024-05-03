@@ -6,10 +6,8 @@ export const handleCheckout = function () {
   const orderReviewWrapper = document.querySelector('.order-review-container');
   orderReviewWrapper.innerHTML = '';
   const cartItems = JSON.parse(localStorage.getItem('cart') || []);
-  console.log(cartItems);
 
   cartItems.map((jacket, index) => {
-    console.log(jacket);
     // generate single item wrapper
     const singleItemWrapper = document.createElement('div');
     singleItemWrapper.classList.add('order');

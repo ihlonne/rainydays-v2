@@ -87,8 +87,6 @@ export const displayProductPage = function (jacket) {
       color: jacket.data.baseColor,
       size: selectedSize,
     };
-    console.log(cartItem);
-
     // Retrieve existing cart data from localStorage
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     cartItems.push(cartItem);
