@@ -2,8 +2,6 @@ export function displayJackets(filteredData) {
   const productWrapper = document.querySelector('.products-wrapper__products');
   productWrapper.innerHTML = '';
 
-  console.log(filteredData);
-
   filteredData.map((item) => {
     const productArticle = document.createElement('article');
     productArticle.setAttribute('id', item.id);
@@ -20,9 +18,6 @@ export function displayJackets(filteredData) {
             </div>
             </a>
       `;
-    /* productArticle.addEventListener('click', () => {
-      window.location.href = `/product/?id=${item.id}`;
-    }); */
     productArticle.innerHTML = content;
 
     productWrapper.append(productArticle);
