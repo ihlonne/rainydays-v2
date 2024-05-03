@@ -1,3 +1,5 @@
+import { handleUI } from '../common/handleUI.mjs';
+
 export const addToCart = function (jacket) {
   const cart = localStorage.getItem('cart');
 
@@ -29,6 +31,7 @@ const removeFromCart = function (index) {
 };
 
 const handleCheckout = function () {
+  handleUI();
   const orderReviewWrapper = document.querySelector('.order-review-container');
   orderReviewWrapper.innerHTML = '';
   const cartItems = JSON.parse(localStorage.getItem('cart') || []);
