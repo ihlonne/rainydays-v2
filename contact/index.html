@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore our women's section." />
-    <title>Browse Women's Jackets | Rainy Days</title>
+    <meta
+      name="description"
+      content="RainyDays Customer Support. Response time usually within 48 hours in business days."
+    />
+    <title>Customer Support | Rainy Days</title>
     <link
       rel="shortcut icon"
       href="../../assets/images/favicon.ico"
@@ -22,42 +25,38 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../../css/styles.css" />
-
-    <script
-      type="module"
-      src="../../scripts/ui/jackets/women/womens.mjs"
-    ></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script type="module" src="../scripts/displayUI.mjs"></script>
   </head>
   <body>
     <header>
       <nav class="navigation">
         <a href="/"
           ><img
-            src="../../assets/images/logo.png"
+            src="../assets/images/logo.png"
             alt="company logo showing mountains and text saying rainy days"
         /></a>
         <div class="navigation-links">
           <ul>
-            <a href="/">
+            <a href="../product/women/">
               <li>Women</li>
             </a>
-            <a href="../men/">
+            <a href="../product/men/">
               <li>Men</li>
             </a>
-            <a href="../../about/">
+            <a href="../about/">
               <li>Info</li>
             </a>
-            <a href="../../contact/">
+            <a href="/">
               <li>Contact</li>
             </a>
           </ul>
         </div>
         <div class="navigation-icons">
-          <a href="../../myprofile/">
+          <a href="../myprofile/">
             <i class="fa-regular fa-user fa-lg"></i>
           </a>
-          <a href="../../checkcout/">
+          <a href="../checkcout/">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
           </a>
         </div>
@@ -69,19 +68,81 @@
       </nav>
     </header>
 
-    <main>
-      <section id="gender-page" class="flex">
-        <div id="products-wrapper" class="products-wrapper flex">
-          <div class="products-wrapper__products">
-            <div class="loader hidden">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+    <main id="contact-page" class="container flex">
+      <h1>Customer Support</h1>
+      <div class="contact-page__container flex">
+        <div class="contact-page__form">
+          <form>
+            <input
+              type="text"
+              name="firstname"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Last Name"
+              required
+            /><br />
+            <input
+              type="email"
+              name="email"
+              placeholder="What is your e-post?"
+              required
+            /><br />
+            <select name="subject" id="subject">
+              <option>Subject</option>
+              <option value="shipping">Shipping</option>
+              <option value="invoice">Invoice</option>
+              <option value="other">Other</option></select
+            ><br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message..."
+              required
+            ></textarea
+            ><br />
+            <input type="submit" value="Send message" />
+          </form>
         </div>
-      </section>
+        <div class="contact-page__faq">
+          <p>Frequently asked questions:</p>
+          <h2>I have not received my order confirmation?</h2>
+          <p>
+            Please check your spam folder to ensure that it has not been
+            flagged. Be aware that it can take up to 24 hours before it arrives
+            in your inbox. If you have not received it within 24 hours you are
+            welcome to contact our customer support.
+          </p>
+          <h2>What does it cost to return an item?</h2>
+          <p>
+            It is free to return a parcel to us so long as it is returned within
+            30 days of receiving it. Otherwise, the cost for returning an order
+            is 59 NOK.
+          </p>
+          <h2>What is the delivery time?</h2>
+          <p>
+            Estimated delivery is 4-5 business days. However, please be advised
+            that holiday rush may cause delivery date to extend with one
+            additional week.
+          </p>
+
+          <h2>Contact us</h2>
+          <p>
+            Telephone: (+47) 55 55 55 55
+            <br />
+            E-post: support@rainydays.no
+          </p>
+          <p>
+            We respond to tickets as soon as possible, usually within 48 hours
+            in business days.
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer class="footer-container">
@@ -101,7 +162,7 @@
       </div>
       <div class="footer-info-container">
         <div class="contact-info">
-          <img src="../../../assets/images/logo.png" alt="company logo" />
+          <img src="../../assets/images/logo.png" alt="company logo" />
           <div>
             <p>Call us: (+47) 55 55 55 55</p>
             <a href="../../index.html">support@rainydays.no</a>
@@ -137,28 +198,28 @@
           <div>
             <img
               id="vipps"
-              src="../../../assets/images/vipps_logo_rgb.png"
+              src="../../assets/images/vipps_logo_rgb.png"
               alt="vipps logo"
             />
           </div>
           <div>
             <img
               id="klarna"
-              src="../../../assets/images/2560px-Klarna_Payment_Badge.svg.png"
+              src="../../assets/images/2560px-Klarna_Payment_Badge.svg.png"
               alt="klarna logo"
             />
           </div>
           <div>
             <img
               id="mastercard"
-              src="../../../assets/images/Mastercard_2019_logo.svg.png"
+              src="../../assets/images/Mastercard_2019_logo.svg.png"
               alt="mastercard logo"
             />
           </div>
           <div>
             <img
               id="visa"
-              src="../../../assets/images/Visa_Inc._logo.svg.webp"
+              src="../../assets/images/Visa_Inc._logo.svg.webp"
               alt="visa logo"
             />
           </div>
