@@ -4,7 +4,7 @@ Hero section
 */
 
 .hero-wrapper {
-  background: url('../../assets/images/photo-1492133969098-09ba49699f47.avif')
+  background: url('../assets/images/photo-1492133969098-09ba49699f47.avif')
     center / cover no-repeat;
   height: 80vh;
   width: 100%;
