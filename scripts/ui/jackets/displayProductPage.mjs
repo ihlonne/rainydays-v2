@@ -81,16 +81,19 @@ export const displayProductPage = function (jacket) {
   addToCartButton.addEventListener('click', () => {
     // add to cart
     const cartItem = {
+      id: jacket.data.id,
       name: jacket.data.title,
       price: jacket.data.price,
       image: jacket.data.image,
       color: jacket.data.baseColor,
       size: selectedSize,
     };
+
     // Retrieve existing cart data from localStorage
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    cartItems.push(cartItem);
+    cartItems.push({ ...cartItem, quantity: 1 });
     addToCart(cartItems);
+    console.log(cartItem);
 
     // Save updated cart data back to localStorage
     localStorage.setItem('cart', JSON.stringify(cartItems));
