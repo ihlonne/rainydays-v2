@@ -24,23 +24,22 @@
       referrerpolicy="no-referrer"
     />
 
-    <script src="../scripts/ui/cart/cart.mjs" type="module"></script>
+    <script src="../scripts/ui/cart/handleCheckout.mjs" type="module"></script>
   </head>
   <body>
     <header>
       <nav class="navigation">
-        <a href="/">
-          <img
+        <a href="/"
+          ><img
             src="../assets/images/logo.png"
             alt="company logo showing mountains and text saying rainy days"
-          />
-        </a>
+        /></a>
         <div class="navigation-links">
           <ul>
-            <a href="">
+            <a href="../women/">
               <li>Women</li>
             </a>
-            <a href="">
+            <a href="../men/">
               <li>Men</li>
             </a>
             <a href="">
@@ -52,11 +51,8 @@
           </ul>
         </div>
         <div class="navigation-icons">
-          <a href href="">
+          <a href href="../myprofile/">
             <i class="fa-regular fa-user fa-lg"></i>
-          </a>
-          <a href="">
-            <i class="fa-regular fa-heart fa-lg"></i>
           </a>
           <a href="/">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
@@ -274,15 +270,9 @@
 
         <div class="order-review__total-info">
           <div class="total-info-text">
-            <p><span>Products</span></p>
-            <p><span>Discount</span></p>
-            <p><span>Sum (excluded shipping)</span></p>
+            <p><span>Sum</span></p>
           </div>
-          <div class="total-info-price">
-            <p><span>kr 2.399</span></p>
-            <p><span>kr 0</span></p>
-            <p><span>kr. 2.399</span></p>
-          </div>
+          <div class="total-info-price"></div>
         </div>
         <div class="order-review__buttons">
           <a href="/">Continue Shopping</a>

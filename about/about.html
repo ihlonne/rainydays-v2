@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore our women's section." />
-    <title>Browse Women's Jackets | Rainy Days</title>
+    <meta
+      name="description"
+      content="Explore our about page to learn about our brand's rich history and commitment to quality."
+    />
+    <title>About | Rainy Days</title>
     <link
       rel="shortcut icon"
-      href="./assets/images/favicon.ico"
+      href="../../assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="icon" href="./assets/images//favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="icon"
+      href="../../assets/images//favicon.ico"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -19,8 +25,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <script type="module" src="../scripts/ui/jackets/men/mens.mjs"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script type="module" src="../scripts/displayUI.mjs"></script>
   </head>
   <body>
     <header>
@@ -35,25 +41,22 @@
             <a href="../women/">
               <li>Women</li>
             </a>
-            <a href="/">
+            <a href="../men/">
               <li>Men</li>
             </a>
-            <a href="../../about/">
+            <a href="">
               <li>Info</li>
             </a>
-            <a href="../../checkcout/">
+            <a href="">
               <li>Contact</li>
             </a>
           </ul>
         </div>
         <div class="navigation-icons">
-          <a href href="">
+          <a href href="../myprofile/">
             <i class="fa-regular fa-user fa-lg"></i>
           </a>
-          <a href="">
-            <i class="fa-regular fa-heart fa-lg"></i>
-          </a>
-          <a href="../checkcout/">
+          <a href="/">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
           </a>
         </div>
@@ -65,19 +68,36 @@
       </nav>
     </header>
 
-    <main id="gender-page">
-      <section class="flex">
-        <div id="products-wrapper" class="products-wrapper flex">
-          <div class="products-wrapper__products">
-            <div class="loader hidden">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+    <main id="about-us-page">
+      <div class="about-us-container flex">
+        <h1>ABOUT US</h1>
+        <div class="about-us__content-container flex">
+          <img
+            src="../assets/images/skiing.jpg"
+            alt="old photo of men skiing"
+          />
+          <div class="text-container">
+            Welcome to our outdoor apparel haven! At our store, we specialize in
+            mid-range jackets that strike the perfect balance between
+            affordability and exceptional quality. Our focus is on durability,
+            ensuring that our jackets are built to withstand the rigors of
+            various outdoor adventures.
           </div>
         </div>
-      </section>
+        <div class="about-us__content-container flex reverse">
+          <img
+            src="../assets/images/skiingview.jpg"
+            alt="skiing man enjoying the view"
+          />
+          <div class="text-container">
+            Designed to be versatile, our jackets are suitable for a range of
+            weather conditions, providing our customers with the comfort they
+            need for every expedition. Explore our collection and gear up for an
+            outdoor experience like never before, where durability meets
+            affordability for your ultimate comfort and satisfaction.
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer-container">
@@ -97,7 +117,7 @@
       </div>
       <div class="footer-info-container">
         <div class="contact-info">
-          <img src="../../../assets/images/logo.png" alt="company logo" />
+          <img src="../../assets/images/logo.png" alt="company logo" />
           <div>
             <p>Call us: (+47) 55 55 55 55</p>
             <a href="../../index.html">support@rainydays.no</a>
@@ -133,28 +153,28 @@
           <div>
             <img
               id="vipps"
-              src="../../../assets/images/vipps_logo_rgb.png"
+              src="../../assets/images/vipps_logo_rgb.png"
               alt="vipps logo"
             />
           </div>
           <div>
             <img
               id="klarna"
-              src="../../../assets/images/2560px-Klarna_Payment_Badge.svg.png"
+              src="../../assets/images/2560px-Klarna_Payment_Badge.svg.png"
               alt="klarna logo"
             />
           </div>
           <div>
             <img
               id="mastercard"
-              src="../../../assets/images/Mastercard_2019_logo.svg.png"
+              src="../../assets/images/Mastercard_2019_logo.svg.png"
               alt="mastercard logo"
             />
           </div>
           <div>
             <img
               id="visa"
-              src="../../../assets/images/Visa_Inc._logo.svg.webp"
+              src="../../assets/images/Visa_Inc._logo.svg.webp"
               alt="visa logo"
             />
           </div>
