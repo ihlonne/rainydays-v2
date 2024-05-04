@@ -1,136 +1,138 @@
 @import url('./variables.css');
 
 .navigation {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: 1s ease;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 1s ease;
 
-    top: 0;
-    left: 0;
-    & img {
-        max-height: 45px;
-    }
+  top: 0;
+  left: 0;
 
-    & ul {
-        display: inline-flex;
-        list-style: none;
-    }
+  z-index: 3;
+  & img {
+    max-height: 45px;
+  }
 
-    & li {
-        margin: 0 1rem;
-        color: #0c0c0c;
-    }
+  & ul {
+    display: inline-flex;
+    list-style: none;
+  }
 
-    & a {
-        color: #0c0c0c;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 600;
-        margin: 0.5rem;
-    }
+  & li {
+    margin: 0 1rem;
+    color: #0c0c0c;
+  }
+
+  & a {
+    color: #0c0c0c;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
 }
 
 .amount {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #8ab0bd;
-    height: 15px;
-    width: 15px;
-    font-weight: 700;
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 0.5rem;
-    top: 18px;
-    right: 32px;
-    border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8ab0bd;
+  height: 15px;
+  width: 15px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  top: 18px;
+  right: 32px;
+  border-radius: 10px;
 }
 .change {
-    background-color: white;
-    transition: 1s ease;
+  background-color: white;
+  transition: 1s ease;
 }
 
 .navigation-links {
-    display: flex;
+  display: flex;
 }
 
 @media only screen and (max-width: 768px) {
-    .navigation-links {
-        position: fixed;
-        left: 100%;
-        top: 70px;
-        flex-direction: column;
-        height: 100vh;
-        background-color: #fff;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
+  .navigation-links {
+    position: fixed;
+    left: 100%;
+    top: 70px;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
 
-        & ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            height: 100%;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        & li {
-            margin-bottom: 2rem;
-        }
+    & ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      font-size: 2rem;
+      font-weight: 700;
     }
 
-    .active {
-        left: 0;
+    & li {
+      margin-bottom: 2rem;
     }
+  }
 
-    .navigation-icons {
-        display: none;
-    }
+  .active {
+    left: 0;
+  }
 
-    .hamburger-menu.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+  .navigation-icons {
+    display: none;
+  }
 
-    .hamburger-menu.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-    .hamburger-menu.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 .navigation-links a:hover,
 a:active {
-    text-decoration: #8ab0bd solid 3px underline;
-    text-underline-offset: 8px;
+  text-decoration: #8ab0bd solid 3px underline;
+  text-underline-offset: 8px;
 }
 
 /* Hamburger */
 
 .hamburger-menu {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 
-    @media only screen and (max-width: 768px) {
-        display: block;
-    }
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
