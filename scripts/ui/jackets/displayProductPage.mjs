@@ -102,7 +102,6 @@ export const displayProductPage = function (jacket) {
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     cartItems.push({ ...cartItem, quantity: 1 });
     addToCart(cartItems);
-    console.log(cartItem);
 
     // Save updated cart data back to localStorage
     localStorage.setItem('cart', JSON.stringify(cartItems));
