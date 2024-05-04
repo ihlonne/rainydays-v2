@@ -66,6 +66,15 @@ export const displayProductPage = function (jacket) {
   // set size on click
   jacketSizes.querySelectorAll('button').forEach((button) => {
     button.addEventListener('click', () => {
+      // Remove the info-size-select__btn-selected class from all buttons
+      jacketSizes.querySelectorAll('button').forEach((btn) => {
+        btn.classList.remove('info-size-select__btn-selected');
+      });
+
+      // Add the info-size-select__btn-selected class to the clicked button
+      button.classList.add('info-size-select__btn-selected');
+
+      // Set the selected size to the text content of the clicked button
       selectedSize = button.textContent;
     });
   });
