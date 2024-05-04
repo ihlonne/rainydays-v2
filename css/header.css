@@ -60,6 +60,13 @@
 
 .navigation-links {
   display: flex;
+
+  & a:last-child {
+    display: none;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
