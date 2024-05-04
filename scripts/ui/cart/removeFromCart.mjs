@@ -1,3 +1,4 @@
+import { handleCartTotal } from './handleCartTotal.mjs';
 import { handleCheckout } from './handleCheckout.mjs';
 
 export const removeFromCart = function (index) {
@@ -13,5 +14,6 @@ export const removeFromCart = function (index) {
 
     // Call the function to update the displayed cart
     handleCheckout();
+    handleCartTotal();
   }
 };
