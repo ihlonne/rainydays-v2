@@ -16,7 +16,6 @@ export async function main() {
     setCategory(jackets);
   } catch (error) {
     console.log(error);
-    //display error message in HTML
   } finally {
     hideLoader();
   }
