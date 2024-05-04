@@ -1,14 +1,30 @@
-export const addToCart = function (jacket) {
-  console.log(jacket);
+export const addToCart = function (jackets, quantity = 1) {
   const cart = localStorage.getItem('cart');
 
   if (cart === null) {
-    const newCart = [];
-    newCart.push(jacket);
+    // If the cart is empty, initialize it with the jackets and their quantity
+    const newCart = jackets.map((jacket) => ({
+      ...jacket,
+      quantity: quantity,
+    }));
     localStorage.setItem('cart', JSON.stringify(newCart));
   } else {
     const newCart = JSON.parse(cart);
-    newCart.push(jacket);
+
+    jackets.forEach((jacket) => {
+      const existingItemIndex = newCart.findIndex(
+        (item) => item.id === jacket.id
+      );
+
+      if (existingItemIndex !== -1) {
+        // If the item already exists in the cart, update its quantity
+        newCart[existingItemIndex].quantity += quantity;
+      } else {
+        // If the item does not exist in the cart, add it with the specified quantity
+        newCart.push({ ...jacket, quantity: quantity });
+      }
+    });
+
     localStorage.setItem('cart', JSON.stringify(newCart));
   }
 };
