@@ -1,0 +1,94 @@
+/* ------------------------- 
+
+CONTACT US PAGE
+
+------------------------- */
+
+#contact-page {
+  margin: 6rem 0;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-page__container {
+  flex-direction: row;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.contact-page__container > div {
+  margin: 0 2rem;
+}
+
+.contact-page__form {
+  max-width: 500px;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.contact-page__form input[type='text'],
+.contact-page__form input[type='email'],
+.contact-page__form input[type='subject'],
+.contact-page__form input[type='submit'] {
+  height: 45px;
+}
+
+.contact-page__form input,
+.contact-page__form select,
+.contact-page__form textarea {
+  background: #fafafa;
+
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+
+  font-family: inherit;
+
+  width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+
+.contact-page__form input[type='submit'] {
+  background: var(--primary-contrast);
+  color: #fff;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.contact-page__faq {
+  max-width: 500px;
+  & p,
+  h2 {
+    margin-top: 1rem;
+  }
+
+  & h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.contact-page__faq p:last-child {
+  font-style: italic;
+}
