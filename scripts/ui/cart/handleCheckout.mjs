@@ -10,7 +10,6 @@ export const handleCheckout = function () {
   const cartItems = JSON.parse(localStorage.getItem('cart') || []);
 
   cartItems.map((jacket, index) => {
-    console.log(jacket);
     // generate single item wrapper
     const singleItemWrapper = document.createElement('div');
     singleItemWrapper.classList.add('order');
@@ -51,7 +50,6 @@ export const handleCheckout = function () {
     (decreaseAmountButton.setAttribute.id = 'decrease'), jacket.id;
     decreaseAmountButton.style.cursor = 'pointer';
     decreaseAmountButton.addEventListener('click', () => {
-      console.log('clicked');
       // Decrease the quantity by 1
       jacket.quantity--;
 
@@ -81,7 +79,6 @@ export const handleCheckout = function () {
     (increaseAmountButton.setAttribute.id = 'increase'), jacket.id;
     increaseAmountButton.style.cursor = 'pointer';
     increaseAmountButton.addEventListener('click', () => {
-      console.log('clicked');
       // Increase the quantity by 1
       jacket.quantity++;
 
@@ -114,7 +111,6 @@ export const handleCheckout = function () {
     singleItemDelete.style.cursor = 'pointer';
     singleItemDelete.addEventListener('click', () => {
       removeFromCart(index);
-      console.log(index);
     });
 
     singleItemPriceWrapper.append(singleItemPrice, singleItemDelete);

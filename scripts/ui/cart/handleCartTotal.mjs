@@ -6,7 +6,6 @@ export const handleCartTotal = function () {
 
   // Loop over the items in local storage
   const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
-  console.log(cartItems);
   cartItems.forEach((item) => {
     total += item.price * item.quantity;
   });
@@ -15,7 +14,6 @@ export const handleCartTotal = function () {
     <p><span>$${total.toFixed(2)}</span></p>
   `;
   totalWrapper.innerHTML = content;
-  console.log('Cart total: $' + total.toFixed(2));
 
   return total;
 };

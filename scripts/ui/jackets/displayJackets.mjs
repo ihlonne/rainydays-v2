@@ -27,6 +27,5 @@ export function displayJackets(filteredData) {
     });
   } catch (error) {
     displayMessage(productWrapper, '', error);
-    console.log(error);
   }
 }
