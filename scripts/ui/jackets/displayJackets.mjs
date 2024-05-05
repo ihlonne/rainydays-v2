@@ -8,8 +8,8 @@ export function displayJackets(filteredData) {
     filteredData.map((item) => {
       const productArticle = document.createElement('article');
       productArticle.setAttribute('id', item.id);
-      productArticle.classList.add('.products-wrapper__item');
-      productArticle.classList.add('.flex');
+      productArticle.classList.add('products-wrapper__item');
+      productArticle.classList.add('flex');
       const content = `
               <a href="/product/?id=${item.id}">
               <div class="products-wrapper__img" >
