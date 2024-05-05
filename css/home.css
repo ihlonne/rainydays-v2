@@ -66,7 +66,7 @@ Products section
   gap: 2rem;
   min-height: 33vh;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 2rem 0;
 
   & h2 {
@@ -85,7 +85,7 @@ Products section
   align-items: center;
   width: 100%;
   height: 30px;
-  margin: 4rem 0;
+  margin: 4rem auto;
 
   & h2 {
     text-transform: uppercase;
@@ -101,7 +101,6 @@ Products section
 .products-wrapper__products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-self: center;
   gap: 1.5rem;
   row-gap: 3rem;
   margin: 0 auto;
@@ -118,7 +117,10 @@ Products section
 }
 
 .products-wrapper__item {
-  width: 266px;
+  width: 280px;
+  box-shadow: 1px 15px 15px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem;
   a {
     text-decoration: none;
   }
