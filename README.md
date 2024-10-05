@@ -4,6 +4,8 @@ This is the first JavaScript project in the front-end development course I am ta
 
 ![semester-project-screenshot](https://scontent.fosl3-2.fna.fbcdn.net/v/t1.15752-9/461722310_833575055652612_6207664474619679181_n.png?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=FrLcVhwGT1kQ7kNvgHBYrPM&_nc_ht=scontent.fosl3-2.fna&_nc_gid=AMhsr1L-rnvOJLQ7my8VEnA&oh=03_Q7cD1QEkBI1KnTlEbxZ1oSP2h7KXZra5W55KO-FbqjYgrqA4yw&oe=67289318)
 
+[Live Preview](https://ihl-rainy-days-v2.netlify.app/)
+
 ## Table of contents
 
 - [Overview](#overview)
